@@ -1,0 +1,88 @@
+body {
+  background-color: rgb(240, 238, 235);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  max-width: 60rem;
+}
+@media only screen and (min-width: 600px) {
+  .container {
+    margin: 0 auto;
+  }
+}
+header img {
+  height: 5rem;
+}
+.box {
+  background-color: aliceblue;
+  border-radius: 3px;
+  margin: 0rem 1rem 1.5rem;
+  padding: 1.5rem 1rem;
+}
+.nav {
+  background-color: white;
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+nav a {
+  font-size: 1.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid coral;
+}
+nav a:hover {
+  background-color: rgb(199, 199, 127);
+  color: white;
+}
+.logoCont {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+}
+.logoTXT {
+  color: black;
+}
+@media only screen and (min-width: 600px) {
+  .nav {
+    flex-direction: row;
+  }
+  nav a {
+    text-decoration: none;
+    border-bottom: none;
+    color: black;
+  }
+}
+.box h1 {
+  font-weight: 100;
+}
+.help {
+  display: none;
+}
+@media only screen and (min-width: 600px) {
+  .help {
+    display: block;
+  }
+  main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "sidebar main"
+      "help main";
+  }
+  .login {
+    grid-area: sidebar;
+  }
+  .help {
+    grid-area: help;
+  }
+  .content {
+    grid-area: main;
+  }
+}
+footer {
+  text-align: center;
+  color: blueviolet;
+}
